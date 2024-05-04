@@ -7,35 +7,41 @@ This repository explores the potential of a local Retrieval-Augmented Generation
 
 
 ## Getting Started:
-[download & install ollama](https://ollama.com/)
+[Download & Install Ollama](https://ollama.com/)
 ```bash
-download & install ollama, see ref
 ollama pull nomic-embed-text
 ollama pull gemma:2b
 ollama serve
 ```
 
-install python ollama, langchain, chromadb, etc 
+Install python ollama, langchain, chromadb, etc 
 ```bash
 pip install -r requirements.txt
 ```
 
-run chroma db
+Run chroma db
 ```bash
 chroma run --host localhost --port 8000
 ```
 
-run retrieval to import + vectorised medical reference
+Run retrieval to import + vectorised medical reference
 ```python
 python retrieval.py
 ```
 
-try medical query
+Try to ask medical query
 ```bash
-(.venv) josnin@MacBook-Pro llama-medical % python generate.py "how our liver function?" 
-Sure, here's an accurate answer based on the provided medical text references:
+(.venv) josnin@MacBook-Pro llama-medical % python generate.py "what are the causes of kidney stones?"
+Sure, here are the causes of kidney stones based on the provided medical text references:
 
-Liver function tests are blood tests used to help find the cause of your symptoms and monitor liver disease or damage. These tests measure the levels of certain enzymes and proteins in your blood. Higher levels of certain enzymes or proteins may indicate liver damage or disease.
+* Diet, excess body weight, some medical conditions, and certain supplements and medications.
+* Dehydration.
+* Obesity.
+* Digestive diseases and surgery.
+* Renal tubular acidosis.
+* Cystinuria.
+* Hyperparathyroidism.
+* Repeated urinary tract infections.
 ```
 
 
