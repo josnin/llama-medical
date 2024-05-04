@@ -8,28 +8,35 @@ This repository explores the potential of a local Retrieval-Augmented Generation
 
 ## Getting Started:
 [Download & Install Ollama](https://ollama.com/)
+### Download Pretrained model
 ```bash
 ollama pull nomic-embed-text
 ollama pull gemma:2b
+```
+### Start Ollama Server
+```bash
 ollama serve
 ```
 
-Install python ollama, langchain, chromadb, etc 
+### Install Python Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-Run chroma db
+### Setup ChromaDB
+[Try ChromaDB](https://docs.trychroma.com/getting-started)
 ```bash
 chroma run --host localhost --port 8000
 ```
 
-Run retrieval to import + vectorised medical reference
+### Import and Vectorized Medical Reference
+Run the retrieval script to import and vectorize medical reference data
 ```python
 python retrieval.py
 ```
 
-Try to ask medical query
+### Start Querying
+You're all set to start querying the medical reference data with Ollama. Try asking a medical query to get started!
 ```bash
 (.venv) josnin@MacBook-Pro llama-medical % python generate.py "what are the causes of kidney stones?"
 Sure, here are the causes of kidney stones based on the provided medical text references:
