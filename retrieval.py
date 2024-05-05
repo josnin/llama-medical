@@ -19,7 +19,7 @@ else:
     collection = chroma.get_collection(settings.COLLECTION_NAME)
 
 # Set a reasonable chunk size, just to show.
-def process_markdown_files(directory, chunk_size=500, chunk_overlap=50):
+def process_retrieval(directory, chunk_size=500, chunk_overlap=50):
     """
     Processes markdown files, creates chunks, generates embeddings,
     and adds them to ChromaDB.
@@ -53,5 +53,5 @@ def process_markdown_files(directory, chunk_size=500, chunk_overlap=50):
         print(f"{len(chunks)} chunks file {file}")
 
 
-process_markdown_files(settings.DIRECTORY_PATH)
+process_retrieval(settings.DIRECTORY_PATH)
 print(f"total processing time {(time.time() - start_time)} sec")
